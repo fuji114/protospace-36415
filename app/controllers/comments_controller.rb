@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments.includes(:user)
-      render :show # views/tweets/show.html.erbのファイルを参照しています。
+      render "prototypes/show" # views/tweets/show.html.erbのファイルを参照しています。
     end
   end
 
